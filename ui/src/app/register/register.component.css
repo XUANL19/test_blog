@@ -1,0 +1,47 @@
+#sign-up-page-btn {
+  background-color: #3f93e5;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 3%;
+  width: 100%;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#sign-up-page-btn:hover {
+  background-color: #205f9b;
+  cursor: pointer;
+}
+
+.form-register {
+  border-radius: 5px;
+  max-width: 30%;
+  padding: 3%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.form-register-heading{
+  text-align: center;
+  margin-bottom: 5%;
+  font-weight: bold;
+}
+
+.form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  z-index: 2;
+}
+
+.form-register input{
+  margin-bottom: 5%;
+}
+

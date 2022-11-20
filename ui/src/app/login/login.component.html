@@ -1,0 +1,15 @@
+<form class="form-signin">
+  <h2 class="form-signin-heading">Sign In</h2>
+
+  <input name="username" [(ngModel)] = "user.username" type="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+  <input name="password" [(ngModel)] = "user.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+  <button class="btn btn-lg btn-primary btn-block" id="sign-in-page-btn" (click)="validateLogin();" type="button">SIGN IN</button>
+
+  <div id="login-separator-container">
+    <span id="or-separator">OR</span>
+  </div>
+
+  <button class="btn btn-lg btn-primary btn-block" id="register-btn" routerLink="/register" type="button" value="Sign up">SIGN UP</button>
+
+</form>

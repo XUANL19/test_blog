@@ -1,0 +1,85 @@
+#home-text {
+    margin-left: 5%;
+    margin-top: 3%;
+    width: 50%;
+  }
+  
+  #home-intro {
+    margin-top: 2%;
+  }
+  
+  .app-container {
+    min-height: 100%;
+    height:auto !important;
+    height: 100%;
+  }
+  
+  /* #home-page {
+    background-image: url("../assets/img/blog-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+   */
+  /* #login-page,
+  #register-page,
+  #createPost-page,
+  #users-page, */
+  /* #query-page {
+    background-color: rgb(234, 230, 255);
+  } */
+  
+  #my-post-btn {
+    background-color: #3f74e5;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 1%;
+    width: 15%;
+    margin-left: 2%;
+    display: inline-block;
+  }
+
+  #my-post-btn:hover {
+    background-color: #20749b;
+    cursor: pointer;
+  }
+
+  #sign-in-btn,
+  #add-post-btn {
+    background-color: #3f93e5;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 1%;
+    width: 15%;
+    margin-left: 2%;
+    display: inline-block;
+  }
+  
+  #sign-in-btn:hover {
+    background-color: #205f9b;
+    cursor: pointer;
+  }
+  
+  #add-post-btn {
+    background-color: #9370DBFF;
+    padding: 1%;
+    width: 7%;
+  }
+  
+  #add-post-btn:hover {
+    background-color: #623ea4;
+    cursor: pointer;
+  }
+  
+  #navbar-control {
+    width: 50%;
+    margin-right: 1%;
+    margin-top: 0%;
+    text-align: right;
+  }
+  
+  .navbar-nav > li{
+    padding-left: 5%;
+    padding-right: 5%;
+  }

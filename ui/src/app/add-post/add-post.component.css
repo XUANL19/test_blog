@@ -1,0 +1,19 @@
+#add-post-form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#post-submit-btn {
+  background-color: #3f93e5;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5%;
+  width: 7%;
+  display: inline-block;
+}
+
+#post-submit-btn:hover {
+  background-color: #205f9b;
+  cursor: pointer;
+}

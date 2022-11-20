@@ -1,0 +1,55 @@
+
+<head>
+  <link rel="stylesheet" href="https://getbootstrap.com/" />
+  <link
+    href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
+</head>
+
+
+<body>
+
+        <!--提交评论-->
+        <div class="archive-header margin-tb-large border-top">
+
+
+          <div class="comment-header-title margin-t-normal" id="comment">COMMENT</div>
+
+
+          <div class="comment-body">
+            <form action="#" class="form">
+              
+              <div class="row">
+                <div class="col-sm-12" >
+
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <textarea name="comment" class="form-control" [(ngModel)]="content" rows="4"></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <button
+                        type="submit"
+                        class="btn btn-sm btn-light float-right"
+                        (click)="addComment()"
+                      >
+                        + comment
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+</body>

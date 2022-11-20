@@ -1,0 +1,17 @@
+<!-- HIII -->
+
+<div id="navbar-control" class="ml-auto">
+  <input type="button" id="my-post-btn" (click)="goToMyPosts()" value="My Posts">
+  <input type="button" id="add-post-btn" (click)="goToAddPost()" value="+">
+  <input type="button" id="sign-in-btn" routerLink="/" value="Sign out">
+</div>
+
+<div id="home-text">
+  <h1>Hi, {{ userInfo.first_name }} {{ userInfo.last_name }}</h1>
+  <p id="home-intro">
+    Welcome to our blog site! Here you will find posts on a variety of topics
+    ranging from fashion to lifestyle tips. We hope you enjoy your stay and come
+    back often!
+  </p>
+  
+</div>

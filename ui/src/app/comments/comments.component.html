@@ -1,0 +1,76 @@
+
+<!-- <br><br> -->
+<!-- <br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br> -->
+
+<!--pagination for matching users-->
+
+
+
+<!-- <table class="table table-bordered">
+    <tr *ngFor="let comment of comments">
+      <td>
+        {{ comment.content }} 
+        <button type="button" class="close" (click)="deleteById(comment.id, comment.owner_id)">x</button>
+      </td>
+    </tr>
+</table>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div id="navbar-control" class="ml-auto">
+      <button type="button" id="add-comment-btn" (click)="goToAddCommentPage('addcomment')"> + comment</button>
+    </div>
+  </nav> -->
+
+
+<head>
+  <link rel="stylesheet" href="https://getbootstrap.com/" />
+  <link
+    href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
+</head>
+
+
+
+<body>
+
+  <div class="archive-header margin-tb-large">
+    
+    <div class="comment-header-title margin-t-normal">{{comment_num}} comments</div>
+    
+    <div *ngFor="let comment of comments" class="comment-reply-body">
+
+
+      <div class="comment-item">
+        <div class="row">
+
+          <div class="col-sm-10">
+            <div class="margin-ml-normal">
+              {{comment.owner_id}}
+
+              <span class="font-size-sm">&nbsp;&nbsp;&nbsp;{{comment.comment_time}}</span>
+
+              <button type="button" class="close " (click)="deleteById(comment.id, comment.owner_id)">x</button>
+
+            </div>
+            <div class="margin-tb-normal margin-ml-normal">
+              <p>{{comment.content}}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</body>
