@@ -45,11 +45,10 @@ class DatabaseOperations:
 
     @staticmethod
     def user_register(username, password, first_name, last_name, email_address):
-
         sql = "SELECT * FROM users.users where username = %s OR email_address = %s"
         conn = DatabaseOperations._get_connection()
         cur = conn.cursor()
-        res = cur.execute(sql, args=(username,email_address,))
+        res = cur.execute(sql, args=(username, email_address,))
         result = cur.fetchone()
 
         if result:
@@ -66,10 +65,13 @@ class DatabaseOperations:
             else:
                 new_id = str("1")
 
-            res = cur.execute('INSERT INTO users.users VALUES (%s, % s, % s, % s, % s, % s)', (new_id, last_name, first_name, email_address, username, password,))
+            res = cur.execute('INSERT INTO users.users VALUES (%s, % s, % s, % s, % s, % s)',
+                              (new_id, last_name, first_name, email_address, username, password,))
             create_user_message = {'status': 'success', 'message': 'Successfully created!'}
             create_response = Response(json.dumps(create_user_message), status=200, content_type="application.json")
             return create_response
+
+
 
 
 
