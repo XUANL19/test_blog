@@ -30,7 +30,6 @@ import { SingleBlogComponent } from './singleblog/singleblog.component';
 import { UserComponent } from './user/user.component';
 import { UserHomeComponent } from './userhome/userhome.component';
 import { LikeComponent } from './like/like.component';
-import { AllPostsComponent } from './allposts/allposts.component';
 
 
 // @NgModule decorator with its metadata
@@ -49,7 +48,6 @@ import { AllPostsComponent } from './allposts/allposts.component';
     // UserComponent,
     UserHomeComponent,
     LikeComponent,
-    AllPostsComponent,
   ],
   imports: [
     BrowserModule,

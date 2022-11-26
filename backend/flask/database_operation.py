@@ -58,15 +58,7 @@ class DatabaseOperations:
             return fail_response
 
         else:
-            select_last_sql = "select id from users.users ORDER BY id DESC LIMIT 1"
-            res1 = cur.execute(select_last_sql)
-            if res1:
-                last_id = cur.fetchone()["id"]
-                new_id = str(int(last_id) + 1)
-            else:
-                new_id = str("1")
-
-            res = cur.execute('INSERT INTO users.users VALUES (%s, % s, % s, % s, % s, % s)', (new_id, last_name, first_name, email_address, username, password,))
+            res = cur.execute('INSERT INTO users.users VALUES (%s, %s, %s, %s, %s)', (last_name, first_name, email_address, username, password,))
             create_user_message = {'status': 'success', 'message': 'Successfully created!'}
             create_response = Response(json.dumps(create_user_message), status=200, content_type="application.json")
             return create_response
