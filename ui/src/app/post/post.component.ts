@@ -29,6 +29,8 @@ export class PostComponent implements OnInit {
 
   getPosts(){
     let url = this.router.url;
+    // let piece: any = [];
+    // piece = url.split("/")
     this.owner_id = url.split("/")[1];
     this.post_service.getPost(this.owner_id).subscribe((response: any) => {
       console.log('result is ', response);

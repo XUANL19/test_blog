@@ -1,0 +1,37 @@
+<head>
+  <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+  />
+</head>
+
+
+<body>
+
+  <!-- Likes Dropdown  -->
+  <div class="dropdown">
+
+    <!-- Like Button -->
+    <button [disabled]="likeAndDislikeState.likestate === '1'" type="button" name="button" class="btn btn-sm btn-success" (click)="addLike()">
+      <span class="glyphicon glyphicon-thumbs-up">&nbsp;</span>Likes: {{likeAndDislikeState.likecount}}
+    </button>
+
+    <!-- Dropdown Menu Items -->
+    <!-- <div class="dropdown-content">
+      <a [routerLink]="['/user/']">{{ 11 }}</a>
+    </div> -->
+  </div>
+
+
+  <!-- Dislikes Dropdown  -->
+  <div class="dropdown">
+    
+    <!-- Dislike Button -->
+    <button [disabled]="likeAndDislikeState.likestate === '2'" type="button" name="button" class="btn btn-sm btn-warning" (click)="addDislike()">
+      <span class="glyphicon glyphicon-thumbs-down">&nbsp;</span>Dislikes: {{likeAndDislikeState.dislikecount}}
+    </button>
+    <!-- Dropdown Menu Items -->
+    <!-- <div class="dropdown-content">
+          <a [routerLink]="['/user/', disliker]" *ngFor="let disliker of blog.dislikedBy">{{ disliker }}</a>
+        </div> -->
+  </div>
+</body>

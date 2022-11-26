@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { CommentsService } from './comments.service';
 import { Comment } from '../models/comment.model';
 import { Router } from '@angular/router';
@@ -9,24 +9,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./comments.component.css'],
   providers: [CommentsService],
 })
+
+@Injectable()
 export class CommentsComponent {
   public comments: any = [];
   public url = this.router.url;
   public user_id = '';
   public blog_id = '';
   public comment_num = "";
+  public test_num = "..";
 
   constructor(
     private commentsService: CommentsService,
-    private router: Router) {
+    private router: Router,
+   ) {
+    // this.test_num
   }
 
   ngOnInit() {
     this.getComments();
+    // this.test_num = "10";
   }
 
   getComments() {
-    // let url = this.router.url;
 
     if (this.url.includes('posts/')) {
       // url_piece = url.split("/")
@@ -42,7 +47,7 @@ export class CommentsComponent {
 
       this.commentsService.getCommentsNumByBlogID(this.user_id, this.blog_id).subscribe((res: any) => {
         this.comment_num = res;
-        console.log('num of this blig: ', this.comment_num);
+        console.log('comment num of this blog: ', this.comment_num);
     })
 
     
@@ -76,4 +81,5 @@ export class CommentsComponent {
     // console.log(id)
     // console.log(typeof id)
   }
+
 };

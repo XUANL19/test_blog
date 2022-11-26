@@ -29,6 +29,8 @@ import { RegisterComponent } from './register/register.component';
 import { SingleBlogComponent } from './singleblog/singleblog.component'; 
 import { UserComponent } from './user/user.component';
 import { UserHomeComponent } from './userhome/userhome.component';
+import { LikeComponent } from './like/like.component';
+import { AllPostsComponent } from './allposts/allposts.component';
 
 
 // @NgModule decorator with its metadata
@@ -46,6 +48,8 @@ import { UserHomeComponent } from './userhome/userhome.component';
     SingleBlogComponent,
     // UserComponent,
     UserHomeComponent,
+    LikeComponent,
+    AllPostsComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,10 +58,6 @@ import { UserHomeComponent } from './userhome/userhome.component';
     RouterOutlet,
     AppRoutingModule,
     ReactiveFormsModule,
-
-    // AddCommentModule,
-    // SingleBlogModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

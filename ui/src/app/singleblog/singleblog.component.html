@@ -1,8 +1,6 @@
-
+<!-- 
 <head>
   <link rel="stylesheet" href="https://getbootstrap.com/" />
-  <!-- <link rel="stylesheet" href="./kudaompq.css" />
-  <link rel="stylesheet" href="./custom.css" /> -->
   <link
     href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     rel="stylesheet"
@@ -19,11 +17,14 @@
     <input type="button" id="sign-in-btn" routerLink="/" value="Sign out">
   </div>
 
+  <br/>
+  <br/>
+
   <div class="container margin-b-lg">
-    <div class="row">
-      <!--    博客列表-->
-      <div class="col-sm-9">
-        <div class="article-body shadow-small">
+    <div class="row" >
+      
+      <div>
+        <div class="article-body shadow-small" >
           
           <div class="article-header">
             <h1 class="article-title">{{blog.title}}</h1>
@@ -32,7 +33,6 @@
                 ><a href="#">{{blog.blog_owner_id}}</a></span
               >
               <span class="article-date"><a href="#">{{blog.time}}</a></span>
-              <!-- <span class="article-link"><a href="#">4 评论</a></span> -->
               <span class="views-count"><a href="#">{{blog.comment_num}} comments</a></span>
             </div>
           </div>
@@ -54,6 +54,70 @@
       </div>
     </div>
     
+  </div>
+  
+</body> -->
+
+
+<head>
+  <link rel="stylesheet" href="https://getbootstrap.com/" />
+  <!-- <link rel="stylesheet" href="./kudaompq.css" />
+  <link rel="stylesheet" href="./custom.css" /> -->
+  <link
+    href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
+</head>
+
+
+<body>
+
+
+  <div id="navbar-control" class="ml-auto">
+    <input type="button" id="my-post-btn" (click)="goToMyPosts()" value="My Posts">
+    <input type="button" id="add-post-btn" (click)="goToAddPost()" value="+">
+    <input type="button" id="sign-in-btn" routerLink="/" value="Sign out">
+  </div>
+
+  <br/>
+
+
+  <div class="container margin-b-lg">
+    <div >
+      <!--    博客列表-->
+      <div >
+        <div class="article-body shadow-small">
+          <div class="article-header">
+            <h1 class="article-title">{{blog.title}}</h1>
+            <div class="article-meta">
+              <span class="article-category">
+                <a href="#">{{blog.blog_owner_id}}</a>
+              </span>
+              <span class="article-date"><a href="#">{{blog.time}}</a></span>
+              <!-- <span class="article-link"><a href="#">4 评论</a></span> -->
+              <span class="views-count"><a href="#">{{blog.comment_num}} comments</a></span>
+            </div>
+          </div>
+
+          <div class="article-content clearfix">
+            <blockquote>
+              <p style = "display:inline-block;">
+                {{blog.description}}
+              </p>
+            </blockquote>
+          </div>
+
+          <div class="likebutton">
+            <app-like></app-like>
+          </div>
+          
+          <app-comments></app-comments>
+
+          <add-comment></add-comment>
+          
+        </div> 
+      </div>
+    </div>
   </div>
   
 </body>

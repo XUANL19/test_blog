@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { url } from 'inspector';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,9 @@ import { NavigationEnd, Router } from '@angular/router';
 export class AppComponent {
   activePath: string = '';
   activePage: string = '';
+
+  // public url = this.router.url;
+  // public username = '';
 
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
@@ -21,5 +25,11 @@ export class AppComponent {
         this.activePage = this.activePath + '-page';
       }
     });
+
+    // console.log(this.url);
+    // this.username = this.url.split("/")[1];
+    // console.log("username is:", this.username);
+
   }
+
 }

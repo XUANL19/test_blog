@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: ":id/posts", loadChildren: () => import("./post/post.module").then(module => module.PostModule)},
   {path: ":id/addpost", loadChildren: () => import("./add-post/add-post.module").then(module => module.AddPostModule)},
   {path: "register", loadChildren: () => import("./register/register.module").then(module => module.RegisterModule)},
-  // {path: ":id/posts/:id", loadChildren: () => import("./comments/comments.module").then(module => module.CommentsModule)},
+  {path: ":id/allposts", loadChildren: () => import("./allposts/allposts.module").then(module => module.AllPostsModule)},
   {path: ":id/posts/:id", loadChildren: () => import("./singleblog/singleblog.module").then(module => module.SingleBlogModule)},
   {path: ":id/posts/:id/addcomment", loadChildren: () => import("./add-comment/add-comment.module").then(module => module.AddCommentModule)},
   {path: ":id", loadChildren: () => import("./userhome/userhome.module").then(module => module.UserHomeModule)},

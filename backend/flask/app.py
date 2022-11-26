@@ -158,6 +158,41 @@ def get_commentsnum_by_blogid(user_id, blog_id):
     return Response(comment_num, status=200, content_type="application/json")
 
 
+@app.route("/<user_id>/posts/<blog_id>/like", methods=["GET"])
+def get_like_state(user_id, blog_id):
+    result = BlogResource.like_and_dislike_state_check(user_id, blog_id)
+    if result:
+        response = Response(json.dumps(result, default=str), status=200, content_type="application/json")
+    else:
+        response = Response("404 NOT FOUND", status=404, content_type="application/json")
+
+    return response
+
+
+@app.route("/<user_id>/posts/<blog_id>/addlike", methods=["GET"])
+def add_like(user_id, blog_id):
+    response = BlogResource.add_to_like(user_id, blog_id)
+    return response
+
+
+@app.route("/<user_id>/posts/<blog_id>/adddislike", methods=["GET"])
+def add_dislike(user_id, blog_id):
+    response = BlogResource.add_to_dislike(user_id, blog_id)
+    return response
+
+
+@app.route("/<user_id>/posts/<blog_id>/removelike", methods=["GET"])
+def remove_like(user_id, blog_id):
+    response = BlogResource.remove_from_like(user_id, blog_id)
+    return response 
+
+
+@app.route("/<user_id>/posts/<blog_id>/removedislike", methods=["GET"])
+def remove_dislike(user_id, blog_id):
+    response = BlogResource.remove_from_dislike(user_id, blog_id)
+    return response 
+
+
 # make it only run when we run python app.py, not for other files import app.py
 # only the file you run is '__main__'
 if __name__ == '__main__':

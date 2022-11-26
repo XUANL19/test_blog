@@ -27,4 +27,8 @@ export class CommentsService {
     return this.http.get(this.url + '/' + owner_id + '/posts/' + blog_id + '/getcommentsnum');
   }
 
+  aaa() {
+    return this.url
+  }
+
 }

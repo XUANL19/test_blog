@@ -1,23 +1,48 @@
-import { Component } from '@angular/core';
+import { Component, Injector } from '@angular/core';
 import { AddCommentService } from './add-comment.service';
 import { Comment } from '../models/comment.model';
 import { Router } from '@angular/router';
+import { CommentsComponent } from '../comments/comments.component';
+import { CommentsService } from '../comments/comments.service';
 
 @Component({
   selector: 'add-comment',
   templateUrl: './add-comment.component.html',
   styleUrls: ['./add-comment.component.css'],
-  providers: [ AddCommentService ]
+  providers: [ AddCommentService,
+              CommentsComponent,
+              CommentsService,
+  ],
 })
+
+
 export class AddCommentComponent {
 
   // public comment : Comment;
+
   public content = '';
 
+  // public aaa : CommentsComponent;
+
   constructor(private addcommentService: AddCommentService, 
-              private router: Router) {
+              private router: Router,
+              private aaa: CommentsComponent
+              // private commentsService: CommentsService,
+              ) {
               // this.comment = new Comment();
+              // this.aaa = new CommentsComponent(commentsService, router);
   }
+
+  // ngOnInit() {
+  //   this.show();
+  // }
+
+
+  // show() {
+  //   // this.aaa.subscribe()
+  //   console.log(this.aaa.test_num)
+  // }
+
 
   addComment() {
     let url = this.router.url
@@ -46,3 +71,5 @@ export class AddCommentComponent {
     // }
   }
 }
+
+
